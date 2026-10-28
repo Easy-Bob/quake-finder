@@ -1,6 +1,6 @@
 _ > nanoagent.plugin.v0001.ProductConfig:
 tagline: "Every earthquake near a city in its own calendar year"
-summary: "Ask which earthquakes hit near Tokyo, Kathmandu, Lima or five other cities in a given year. An agent searches the live USGS Earthquake Catalog, converting the city's local year into UTC, and names the largest and the closest; a verifier recomputes the answer from the same catalog data."
+summary: "Ask for earthquakes near Tokyo, Manila, Jakarta, Kathmandu, Lima, Honolulu, Reykjavik or Taipei in one year (1990-2024), with a minimum magnitude (4.5-8.0) and a radius (50-800 km). Example: 'Quakes of magnitude 6.0+ within 300 km of Kathmandu in 2015.' An agent searches the live USGS catalog in the city's local year, and a verifier recomputes the answer."
 highlights:
   - "Live data from the official USGS Earthquake Catalog"
   - "Local years done right: Tokyo's New Year starts at 15:00 UTC the day before"
