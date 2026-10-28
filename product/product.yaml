@@ -1,0 +1,11 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Every earthquake near a city in its own calendar year"
+summary: "Ask which earthquakes hit near Tokyo, Kathmandu, Lima or five other cities in a given year. An agent searches the live USGS Earthquake Catalog, converting the city's local year into UTC, and names the largest and the closest; a verifier recomputes the answer from the same catalog data."
+highlights:
+  - "Live data from the official USGS Earthquake Catalog"
+  - "Local years done right: Tokyo's New Year starts at 15:00 UTC the day before"
+  - "Every answer is checked against the catalog data the agent read"
+steps:
+  - "Ask, e.g. which quakes of magnitude 5.0 or more struck within 300 km of Tokyo in 2005"
+  - "The agent looks up the city, searches the catalog and picks the largest and the closest"
+  - "It submits the events, and the verdict card shows whether they are exactly right"

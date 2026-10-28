@@ -1,0 +1,37 @@
+{
+  "description": "count does not match the list.",
+  "question": {
+    "city": "Kathmandu",
+    "year": 2015,
+    "min_magnitude": "6.0",
+    "radius_km": 300
+  },
+  "searches": [
+    [
+      27.7172,
+      85.324,
+      300,
+      "2014-12-31T18:15:00Z",
+      "2015-12-31T18:15:00Z",
+      "6.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "us20002926",
+      "us20002bi4",
+      "us2000292y",
+      "us200029bt",
+      "us20002ejl",
+      "us20002ek5"
+    ],
+    "count": 7,
+    "largest_id": "us20002926",
+    "closest_id": "us20002bi4"
+  },
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "submitted-shape"
+  }
+}

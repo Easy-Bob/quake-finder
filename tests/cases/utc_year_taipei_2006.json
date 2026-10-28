@@ -1,0 +1,55 @@
+{
+  "description": "Searches the UTC calendar year 2006 instead of Taipei's local year.",
+  "question": {
+    "city": "Taipei",
+    "year": 2006,
+    "min_magnitude": "4.5",
+    "radius_km": 150
+  },
+  "searches": [
+    [
+      25.033,
+      121.5654,
+      150,
+      "2006-01-01T00:00:00Z",
+      "2007-01-01T00:00:00Z",
+      "4.5"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000e8nd",
+      "usp000e8q8",
+      "usp000e8q9",
+      "usp000e8wg",
+      "usp000eaq3",
+      "usp000eaqu",
+      "usp000ec5q",
+      "usp000ed7r",
+      "usp000edpt",
+      "usp000efpg",
+      "usp000eggs",
+      "usp000emcn",
+      "usp000epr8",
+      "usp000equk",
+      "usp000erwt",
+      "usp000et55",
+      "usp000eur8",
+      "usp000ev0r",
+      "usp000f06q",
+      "usp000f0dz",
+      "usp000f0kh",
+      "usp000f0un",
+      "usp000f0us",
+      "usp000f1fh"
+    ],
+    "count": 24,
+    "largest_id": "usp000epr8",
+    "closest_id": "usp000f06q"
+  },
+  "expect": {
+    "valid": false,
+    "score": 0.99,
+    "check": "events-exact"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "description": "Treats magnitude 6.0 as not enough (> instead of >=).",
+  "question": {
+    "city": "Lima",
+    "year": 2007,
+    "min_magnitude": "6.0",
+    "radius_km": 400
+  },
+  "searches": [
+    [
+      -12.0464,
+      -77.0428,
+      400,
+      "2007-01-01T05:00:00Z",
+      "2008-01-01T05:00:00Z",
+      "6.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000fjta",
+      "usp000fjva"
+    ],
+    "count": 2,
+    "largest_id": "usp000fjta",
+    "closest_id": "usp000fjta"
+  },
+  "expect": {
+    "valid": false,
+    "score": 0.8889,
+    "check": "events-exact"
+  }
+}

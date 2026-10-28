@@ -1,0 +1,35 @@
+{
+  "description": "West of UTC; USGS writes the Pisco quake's magnitude as 8; two events are exactly 6.0.",
+  "question": {
+    "city": "Lima",
+    "year": 2007,
+    "min_magnitude": "6.0",
+    "radius_km": 400
+  },
+  "searches": [
+    [
+      -12.0464,
+      -77.0428,
+      400,
+      "2007-01-01T05:00:00Z",
+      "2008-01-01T05:00:00Z",
+      "6.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000fjta",
+      "usp000fjva",
+      "usp000fjx3",
+      "usp000fk32"
+    ],
+    "count": 4,
+    "largest_id": "usp000fjta",
+    "closest_id": "usp000fjta"
+  },
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

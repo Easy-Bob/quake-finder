@@ -1,0 +1,52 @@
+{
+  "description": "Searches the UTC calendar year 2005 instead of Tokyo's local year.",
+  "question": {
+    "city": "Tokyo",
+    "year": 2005,
+    "min_magnitude": "5.0",
+    "radius_km": 300
+  },
+  "searches": [
+    [
+      35.6895,
+      139.6917,
+      300,
+      "2005-01-01T00:00:00Z",
+      "2006-01-01T00:00:00Z",
+      "5.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000dd6a",
+      "usp000ddrk",
+      "usp000ddrm",
+      "usp000ddsu",
+      "usp000ddvf",
+      "usp000ddxs",
+      "usp000ddyf",
+      "usp000ddyh",
+      "usp000dg7q",
+      "usp000dm4j",
+      "usp000dmzd",
+      "usp000dr4p",
+      "usp000drrv",
+      "usp000dtf6",
+      "usp000duvu",
+      "usp000dvqt",
+      "usp000dwwd",
+      "usp000e046",
+      "usp000e1xz",
+      "usp000e287",
+      "usp000e2hq"
+    ],
+    "count": 21,
+    "largest_id": "usp000ddrk",
+    "closest_id": "usp000dg7q"
+  },
+  "expect": {
+    "valid": false,
+    "score": 0.99,
+    "check": "events-exact"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "description": "A search receipt edited after it was written.",
+  "question": {
+    "city": "Taipei",
+    "year": 2007,
+    "min_magnitude": "4.5",
+    "radius_km": 150
+  },
+  "searches": [
+    [
+      25.033,
+      121.5654,
+      150,
+      "2006-12-31T16:00:00Z",
+      "2007-12-31T16:00:00Z",
+      "4.5"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000f1fh",
+      "usp000f2eq",
+      "usp000f2rc",
+      "usp000f2ud",
+      "usp000f4vv",
+      "usp000f69u",
+      "usp000f8ed",
+      "usp000fhge",
+      "usp000fmjx",
+      "usp000fmjy",
+      "usp000fqa0",
+      "usp000fs56",
+      "usp000fsdp",
+      "usp000fsmt",
+      "usp000fsmw",
+      "usp000ft4x",
+      "usp000ft4y",
+      "usp000ftg3",
+      "usp000fu28"
+    ],
+    "count": 19,
+    "largest_id": "usp000fmjx",
+    "closest_id": "usp000ftg3"
+  },
+  "tamper": "edit-receipt",
+  "expect": {
+    "valid": false,
+    "score": 0.0,
+    "check": "receipts-integrity"
+  }
+}

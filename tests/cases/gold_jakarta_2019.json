@@ -1,0 +1,32 @@
+{
+  "description": "One quake.",
+  "question": {
+    "city": "Jakarta",
+    "year": 2019,
+    "min_magnitude": "5.5",
+    "radius_km": 300
+  },
+  "searches": [
+    [
+      -6.2088,
+      106.8456,
+      300,
+      "2018-12-31T17:00:00Z",
+      "2019-12-31T17:00:00Z",
+      "5.5"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "us60004zhq"
+    ],
+    "count": 1,
+    "largest_id": "us60004zhq",
+    "closest_id": "us60004zhq"
+  },
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

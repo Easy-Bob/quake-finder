@@ -1,0 +1,23 @@
+{
+  "description": "The right answer without searching.",
+  "question": {
+    "city": "Reykjavik",
+    "year": 2008,
+    "min_magnitude": "6.0",
+    "radius_km": 100
+  },
+  "searches": [],
+  "submit": {
+    "event_ids": [
+      "usp000g826"
+    ],
+    "count": 1,
+    "largest_id": "usp000g826",
+    "closest_id": "usp000g826"
+  },
+  "expect": {
+    "valid": false,
+    "score": 0.5,
+    "check": "proven"
+  }
+}

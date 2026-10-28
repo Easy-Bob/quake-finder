@@ -1,0 +1,30 @@
+{
+  "description": "No quakes at all: the right answer is empty.",
+  "question": {
+    "city": "Honolulu",
+    "year": 2015,
+    "min_magnitude": "5.0",
+    "radius_km": 200
+  },
+  "searches": [
+    [
+      21.3069,
+      -157.8583,
+      200,
+      "2015-01-01T10:00:00Z",
+      "2016-01-01T10:00:00Z",
+      "5.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [],
+    "count": 0,
+    "largest_id": "",
+    "closest_id": ""
+  },
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

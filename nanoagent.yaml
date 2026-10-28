@@ -1,0 +1,40 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: quake-finder
+name: Quake Finder
+version: 0.1.0
+status: ready
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: [earthquake.usgs.gov]
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  pin_quakes:
+    description: Pin the find-quakes task's answer key, the USGS catalog's events a little wider than the question, with their distances from the city
+  city_info:
+    description: Give a city's coordinates and its fixed offset from UTC (the cities never use daylight saving time)
+  search_quakes:
+    description: Search the live USGS Earthquake Catalog for every event within a radius of a point, in a UTC time window, at or above a magnitude, each with its distance from the point; at most 3 searches, each receipted
+
+# One entry per contract.Task; its input class is contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  find-quakes:
+    description: Find every earthquake within a radius of a city (Tokyo, Manila, Jakarta, Kathmandu, Lima, Honolulu, Reykjavik or Taipei) during one year of the city's own calendar, at or above a magnitude, from the USGS catalog, and name the largest and the closest
+    runner: agent
+    tools: [city_info, search_quakes]
+    reference: pin_quakes
+    instructions: |-
+      Goal. List every earthquake that qualifies, and name the largest and the closest.
+      Qualifies. It happened during the given year in the city's OWN clock (local time), its magnitude is at least min_magnitude (equal counts), and it is at most radius_km from the city (equal counts).
+      Local year. The catalog uses UTC. The city's year runs from Jan 1 00:00 local time to the next Jan 1 00:00 local time, so in UTC it starts and ends earlier by the city's offset (later for a negative offset). Example: Tokyo is +09:00, so Tokyo's 2011 is 2010-12-31T15:00:00Z to 2011-12-31T15:00:00Z; Lima is -05:00, so Lima's 2011 is 2011-01-01T05:00:00Z to 2012-01-01T05:00:00Z. Mind offsets like +05:45.
+      Plan. One tool call per step: (1) city_info for the coordinates and the offset; (2) search_quakes once with the city's coordinates, radius_km, min_magnitude, and the local year as start_utc (included) and end_utc (not included); (3) submit. search_quakes already applies the radius, the magnitude and the window exactly, so its events are the answer when the search is right.
+      Largest and closest. The largest has the highest magnitude, the closest the smallest distance_km; on a tie, the earliest. With no events, event_ids is [], count 0, and largest_id and closest_id are "".
+      Submit. event_ids oldest first, exactly as search_quakes gave them, with count, largest_id and closest_id.

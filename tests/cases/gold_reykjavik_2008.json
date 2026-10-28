@@ -1,0 +1,32 @@
+{
+  "description": "UTC offset 0: one quake, both the largest and the closest.",
+  "question": {
+    "city": "Reykjavik",
+    "year": 2008,
+    "min_magnitude": "6.0",
+    "radius_km": 100
+  },
+  "searches": [
+    [
+      64.1466,
+      -21.9426,
+      100,
+      "2008-01-01T00:00:00Z",
+      "2009-01-01T00:00:00Z",
+      "6.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "usp000g826"
+    ],
+    "count": 1,
+    "largest_id": "usp000g826",
+    "closest_id": "usp000g826"
+  },
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}

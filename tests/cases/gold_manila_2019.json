@@ -1,0 +1,32 @@
+{
+  "description": "One quake.",
+  "question": {
+    "city": "Manila",
+    "year": 2019,
+    "min_magnitude": "6.0",
+    "radius_km": 400
+  },
+  "searches": [
+    [
+      14.5995,
+      120.9842,
+      400,
+      "2018-12-31T16:00:00Z",
+      "2019-12-31T16:00:00Z",
+      "6.0"
+    ]
+  ],
+  "submit": {
+    "event_ids": [
+      "us70003a63"
+    ],
+    "count": 1,
+    "largest_id": "us70003a63",
+    "closest_id": "us70003a63"
+  },
+  "expect": {
+    "valid": true,
+    "score": 1.0,
+    "check": null
+  }
+}
